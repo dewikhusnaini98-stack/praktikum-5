@@ -1,3 +1,28 @@
+// Real-time Clock & Greeting
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const formattedHours = hours.toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+    document.getElementById('clock').textContent = `${formattedHours}:${minutes}:${seconds}`;
+
+    let greeting = 'Selamat Malam!';
+    if (hours >= 5 && hours < 11) {
+        greeting = 'Selamat Pagi!';
+    } else if (hours >= 11 && hours < 15) {
+        greeting = 'Selamat Siang!';
+    } else if (hours >= 15 && hours < 18) {
+        greeting = 'Selamat Sore!';
+    }
+    
+    document.getElementById('greeting').textContent = greeting;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
 const form = document.getElementById('formPendaftaran');
 const nameInput = document.getElementById('nama');
 const emailInput = document.getElementById('email');

@@ -61,12 +61,48 @@ body {
   padding: 20px;
 }
 
+#clock-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+}
+
+#clock-container:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#greeting {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+#clock {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+
 .hero img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 3px 8px #44174e;
+  position: relative;
 }
 
 /* ================= */
