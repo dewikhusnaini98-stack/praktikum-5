@@ -114,6 +114,29 @@ ul {
   gap: 15px;
 }
 
+/* SOCIAL MEDIA */
+#social-media ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: 0;
+  flex-wrap: wrap;
+}
+
+#social-media a {
+  background: #44174e;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+#social-media a:hover {
+  background: #0056b3;
+}
+
 /* FORM */
 form {
   background: transparent;
